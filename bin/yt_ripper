@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'youtube-ripper'
+require_relative '../lib/youtube-ripper'
 
-puts "Attempting to download the video available at:\n#{ARGV[0]}"
-ripper = Youtube::Ripper.new(ARGV[0]).fetch
-puts "Found title: \"#{ripper.video.title}\""
-downloader = Youtube::Downloader.new(ripper.video)
-puts "Now downloading to: #{downloader.filename} .."
-downloader.perform!
+page_url = ARGV[0]
+puts "Attempting to download the video at:\n#{page_url}"
+ripper = Youtube::Ripper.new(page_url)
+puts %(Found title: "#{ripper.video_title}")
+puts "Now downloading to: #{ripper.filename} ..."
+ripper.perform
 puts "Done."

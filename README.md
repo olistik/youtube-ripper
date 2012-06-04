@@ -1,29 +1,29 @@
 # Youtube::Ripper
 
 It helps you extract and download a Youtube video.
+It requires the "curl" shell command.
 
 ## Installation
 
-It requires the "curl" shell command.
-
 Add this line to your application's Gemfile:
-
+```ruby
     gem 'youtube-ripper'
-
+```
 And then execute:
-
+```bash
     $ bundle
-
+```
 Or install it yourself as:
-
-    $ gem install youtube-ripper
+```bash
+  $ gem install youtube-ripper
+```
 
 ## Usage
 
 ### Via shell
 
-```shell
-$ yt_ripper "http://www.youtube.com/watch?v=sTSA_sWGM44"
+```bash
+$ yt_ripper http://www.youtube.com/watch?v=sTSA_sWGM44
 ```
 
 This will download the video in your current folder, using the video's title as the filename.
