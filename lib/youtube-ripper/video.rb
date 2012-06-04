@@ -29,11 +29,6 @@ module Youtube
       end
     end
 
-    # this beast should still be refactored. I extracted the method from
-    # #flashvars since it was too damn complex.
-    # Be careful with gsub!, it returns nil if no substitution could be done.
-    # since you're chaining all there is no need for substition, a simple gsub
-    # should work fine (and has no dangerous side effetcts).
     def js_fragment
       Nokogiri::HTML(open(@page_url)).
       css('#watch-video').
