@@ -5,7 +5,9 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Maurizio De Magnis"]
   gem.email         = ["maurizio.demagnis@gmail.com"]
   gem.description   = %q{Download YouTube videos given their public URL.}
-  gem.summary       = %q{Download YouTube videos given their public URL.}
+  gem.summary       = %q{
+    Use it as a standalone shell command or a Ruby library.
+  }
   gem.homepage      = "https://github.com/olistik/youtube-ripper"
 
   gem.add_dependency('nokogiri', '~> 1.5.2')
